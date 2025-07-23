@@ -48,3 +48,26 @@ for(let i = 0; i < articulos.length; i++){
         articulos[i].classList.add("destacado");
     }
 }
+
+//getElementByTagName => document.getElementByTagName();
+let etiquetasArticulos = document.getElementsByTagName("article");
+console.log(etiquetasArticulos);
+
+//QuerySelector
+let seccionArticulos = document.querySelector("#articulos");
+console.log(seccionArticulos);
+
+//QuerySelector y clases
+
+let primerArticulo = document.querySelector(".artuculo");
+primerArticulo.classList.add("bordesRojos");
+
+//QuerySelectorAll
+let articulosAll = document.querySelectorAll(".artuculo");
+
+articulosAll.forEach((articulo, i) => {
+    if(i == 2){
+        articulo.classList.add("bordesRojos");
+        articulo.classList.add("destacado");
+    }
+} );

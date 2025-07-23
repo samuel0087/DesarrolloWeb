@@ -19,3 +19,7 @@
     background-color: aqua;
     font-weight: bold;    
 }
+
+.bordesRojos{
+    border: 5px solid red;
+}
