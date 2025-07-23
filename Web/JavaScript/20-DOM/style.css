@@ -1,0 +1,21 @@
+.cajita{
+    background-color: lightblue;
+    max-width: 25%;
+    margin: 0 auto 40px;
+    padding: 30px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.articuloBase{
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 30px;
+    margin-bottom: 20px;
+    box-shadow: 2px 2px 10px #ccc;
+}
+
+.destacado{
+    background-color: aqua;
+    font-weight: bold;    
+}
