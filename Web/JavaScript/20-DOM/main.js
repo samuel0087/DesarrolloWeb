@@ -71,3 +71,8 @@ articulosAll.forEach((articulo, i) => {
         articulo.classList.add("destacado");
     }
 } );
+
+//Modificaciones
+let tarjeta = document.querySelector("#card");
+console.log(tarjeta);
+
