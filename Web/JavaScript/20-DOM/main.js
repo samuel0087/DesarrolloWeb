@@ -76,3 +76,35 @@ articulosAll.forEach((articulo, i) => {
 let tarjeta = document.querySelector("#card");
 console.log(tarjeta);
 
+tarjeta.textContent = "Contenido nuevo de mi tarjeta";
+tarjeta.innerHTML = "<strong>Hola, esto es una tarjeta</strong>";
+
+tarjeta.setAttribute("class", "card-small");
+
+console.log(tarjeta.getAttribute("class"));
+
+tarjeta.style.padding = " 20px 40px";
+tarjeta.style.borderRadius = "10px";
+tarjeta.style.border = "10px solid grey";
+tarjeta.style.width = "40%";
+tarjeta.style.margin = "auto";
+tarjeta.style.marginBottom = "40px";
+tarjeta.style.textAlign = "center";
+
+tarjeta.classList.add("remarcado");
+
+tarjeta.classList.remove("remarcado");
+
+tarjeta.classList.toggle("redondear");
+
+const titular = document.createElement("h2");
+
+titular.textContent = "Titular";
+
+//tarjeta.append(titular); //agrega al final
+tarjeta.querySelector("strong").remove(); // selecciona un elemento dentro del elemento que estamos trabajando y lo elimina
+
+tarjeta.insertBefore(titular, tarjeta.firstChild);
+
+
+
