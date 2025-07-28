@@ -16,20 +16,25 @@ let seg = 0;
 let min = 0;
 let hor = 0;
 
+//eventos de botones
 btnStart.addEventListener("click", () => {
-    setearBotones();
-    control = setInterval(cronometrar, 1000);
+    control = inicio();
+    btnStart.classList.toggle("oculto");
+    btnStop.classList.toggle("oculto");
 });
 
 btnStop.addEventListener("click", () => {
     clearInterval(control);
+    btnStart.classList.toggle("oculto");
+    btnStop.classList.toggle("oculto");
 });
 
 
 btnReset.addEventListener("click",() =>{
     recetear();
-    setearBotones();
 });
+
+//funciones
 
 function cronometrar(){
     seg++;
@@ -43,26 +48,30 @@ function cronometrar(){
         min = 0;
         hor++;
     }
-    //Revisar los ceros en el tiempo
-    seg = seg < 10 ? "0"+ seg : seg;
-    min = min < 10 ? "0" + min : min;
-    
-    segundos.innerHTML = seg;
-    minutos.innerHTML = min;
-    horas.innerHTML = hor;
+
+    segundos.innerHTML = seg < 10 ? "0"+ seg : seg;
+    minutos.innerHTML = min < 10 ? min.toString().padStart(2, '0') : min; 
+    horas.innerHTML = hor < 10 ? hor.toString().padStart(2, "0") : hor;
+}
+
+function inicio(){
+    return setInterval(cronometrar, 1000);
 }
 
 function recetear(){
-    clearInterval(control);
     seg = 0;
+    min = 0;
+    hor = 0;
     segundos.innerHTML = "00";
     minutos.innerHTML = "00";
     horas.innerHTML = "00";
+
+    clearInterval(control);
+    control = inicio();
+
+    btnStart.classList.add("oculto");
+    btnStop.classList.remove("oculto");
+
 }
 
-function setearBotones(){
-    btnStart.classList.toggle("oculto");
-    btnReset.classList.toggle("oculto");
-    btnStop.classList.toggle("oculto");
-}
 
