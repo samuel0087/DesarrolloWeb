@@ -30,6 +30,29 @@ let b = 0;
 
 caja.addEventListener("mousemove", () => {
     caja.style.border = b + "px solid black";
-    b++;
+    b+= 0.1;
+})
+
+//eventos de teclado
+let texto = document.querySelector("#key");
+let msj = "";
+texto.addEventListener("keydown", (event) => {
+    if(event.key == "Backspace"){
+        msj = msj.slice(0, -1);
+    }
+    else{
+        msj += event.key;
+    }
+    caja.textContent = msj;
+
+})
+
+texto.addEventListener("keyup", (event) => {
+    console.log(event.key);
+})
+
+//keypress
+texto.addEventListener("keypress", () => {
+    console.warn(event.key);
 })
 
