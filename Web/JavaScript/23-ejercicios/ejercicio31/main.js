@@ -16,6 +16,7 @@ window-addEventListener("load",  ()=>{
     let amarillo = document.querySelector(".amarillo");
     let verde = document.querySelector(".verde");
     let boton = document.querySelector(".btn");
+  
 
     boton.addEventListener("click", secuencia);
 
@@ -24,16 +25,36 @@ window-addEventListener("load",  ()=>{
         boton.classList.toggle("presionado");
         //usar setInterval para el semaforo. (utilizar un contador para saber en que tiempo esta)
         
+
+
+        let cont = 0;
+
+        let control = setInterval(() => {
+            cont++;
+
+            if(cont==2){
+                rojoAmarillo();
+            }
+            else if(cont == 5){
+                amarilloVerde();
+            }
+            else if(cont == 12){
+                amarilloVerde();
+            }
+            else if(cont == 15){
+                rojoAmarillo();
+            }
+        }, 1000)
+
         setTimeout(()=>{
-             boton.classList.toggle("presionado");
+            boton.classList.toggle("presionado");
+            clearInterval(control);
             console.log("hola");
         }, 15000);
 
 
-
-
-
     }
+
 
     function rojoAmarillo(){
         rojo.classList.toggle("apagado");
