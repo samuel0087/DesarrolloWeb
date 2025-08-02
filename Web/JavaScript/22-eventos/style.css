@@ -12,6 +12,41 @@
 .oculto{
     display: none;
 }
+
 li{
     margin-bottom: 10px;
 }
+
+.formulario{
+    width: 300px;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #999;
+    border-radius: 20px;
+    box-shadow: 0 0 20px #ccc;
+}
+
+.formulario input,
+.formulario select,
+.formulario option{
+    display: block;
+    width: 90%;
+    border: 1px solid #999;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 15px;
+}
+
+input[type="submit"]{
+    background-color: rgb(42, 42, 248);
+    color: white;
+    border: none;
+    transition: all 300ms;
+}
+
+input[type="submit"]:hover{
+    cursor: pointer;
+    background-color: rgb(23, 23, 235);
+    box-shadow: 0 0 5px rgb(42, 42, 248);
+}
+
