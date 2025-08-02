@@ -1,0 +1,63 @@
+body {
+    background-color: #333;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.semaforo {
+    width: 200px;
+    height: 400px;
+    background-color: #111;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 0 20px rgba(0,0,0,0.7);
+}
+
+.luz {
+    width: 90px;
+    height: 90px;
+    background-color: #444;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+.rojo {
+    background-color: red;
+}
+
+.amarillo {
+    background-color: yellow;
+}
+
+.verde {
+    background-color: green;
+}
+
+.apagado{
+    background-color: #1d1d1d;
+}
+
+.btn {
+    width: 90px;
+    height: 90px;
+    background-color: rgb(255, 174, 0);
+    border-radius: 50%;
+    border: 8px solid black;
+    transition: background-color 0.3s;
+}
+
+.btn:hover{
+    cursor: pointer;
+    box-shadow: 0 0 10px rgb(99, 54, 2) inset;
+}
+
+.presionado{
+     box-shadow: 0 0 15px rgb(99, 54, 2) inset;
+}
