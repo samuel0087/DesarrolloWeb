@@ -35,6 +35,8 @@ li{
     padding: 10px;
     margin-bottom: 15px;
     border-radius: 15px;
+    outline: none;
+    transition: all 300ms;
 }
 
 input[type="submit"]{
@@ -42,11 +44,19 @@ input[type="submit"]{
     color: white;
     border: none;
     transition: all 300ms;
+    box-sizing: border-box;
 }
 
 input[type="submit"]:hover{
     cursor: pointer;
     background-color: rgb(23, 23, 235);
     box-shadow: 0 0 5px rgb(42, 42, 248);
+}
+
+.formulario input:focus,
+.formulario select:focus,
+.formulario option:focus{
+    border: 1px solid rgb(51, 98, 255);
+    box-shadow: 0 0 10px rgb(51, 98, 255);
 }
 
