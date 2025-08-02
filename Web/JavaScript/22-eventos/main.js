@@ -2,11 +2,7 @@
 
 let boton = document.querySelector("#botoncito");
 
-boton.addEventListener("click", (event) => {
-   // alert("Mensaje de accion");
-
-    console.log(event.clientX);
-})
+boton.addEventListener("click", alertita)
 
 let caja = document.querySelector("#caja");
 
@@ -122,4 +118,58 @@ window.addEventListener("resize", () => {
 
 window.addEventListener("scroll", ()=>{
     console.log(`Estas en el pixel: ${window.scrollY}`)
+})
+
+//Portapapeles
+
+let Portapapeles = document.querySelector("#copiar");
+
+Portapapeles.addEventListener("copy", () => {
+    alert("Prohibido copiar, te la creiste");
+    navigator.clipboard.writeText("");
+})
+
+Portapapeles.addEventListener("paste", ()=> {
+    alert("No seas vago, escribe a mano");
+})
+
+Portapapeles.addEventListener("cut", ()=>{
+    alert("Te cache, no te llevas nada");
+    navigator.clipboard.writeText("");
+})
+
+Portapapeles.addEventListener("contextmenu", (event) => {
+    event.preventDefault(); // evita que se abra el menu contextual
+
+    console.warn("aunque quieras no vas a poder llevarte texto");
+})
+
+//Dejar de escuchar eventos
+
+function alertita(){
+    alert("BOTON OPRIMIDO");
+}
+
+// setTimeout(()=>{
+//     boton.removeEventListener("click", alertita);
+
+//     alert("NO SE PUEDE USAR EL BOTON");
+
+// }, 10000);
+
+
+//Propagacion de eventos
+
+let padre = document.querySelector(".padre");
+let hijo = document.querySelector(".hijo");
+
+padre.addEventListener("click", ()=>{
+    console.log("se oprimio el padre");
+})
+
+
+
+hijo.addEventListener("click", (event)=>{
+    event.stopPropagation();
+    console.log("se oprimio el HIJOLE");
 })
