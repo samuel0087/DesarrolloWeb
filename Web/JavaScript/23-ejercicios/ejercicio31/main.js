@@ -23,6 +23,7 @@ window-addEventListener("load",  ()=>{
     function secuencia(){
 
         boton.classList.toggle("presionado");
+        boton.disabled = true;
         //usar setInterval para el semaforo. (utilizar un contador para saber en que tiempo esta)
         
 
@@ -49,7 +50,7 @@ window-addEventListener("load",  ()=>{
         setTimeout(()=>{
             boton.classList.toggle("presionado");
             clearInterval(control);
-            console.log("hola");
+            boton.disabled = false;
         }, 15000);
 
 

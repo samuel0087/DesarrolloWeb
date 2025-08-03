@@ -55,9 +55,9 @@ body {
 
 .btn:hover{
     cursor: pointer;
-    box-shadow: 0 0 10px rgb(99, 54, 2) inset;
+    box-shadow: 0 0 15px #222 inset;
 }
 
 .presionado{
-     box-shadow: 0 0 15px rgb(99, 54, 2) inset;
+     box-shadow: 0 0 15px #222 inset;
 }
