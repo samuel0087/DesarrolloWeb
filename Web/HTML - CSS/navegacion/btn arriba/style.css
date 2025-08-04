@@ -1,0 +1,97 @@
+body{
+    background: url("img/montaña.jpg") no-repeat center center/cover;
+    background-attachment: fixed;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    flex-direction: column;
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.8);
+    color: white;
+    font-family: sans-serif;
+}
+
+.content{
+    width:80% ;
+    
+}
+
+.articulo{
+    width: 100%;
+    height: 150px;
+    padding: 20px;
+    margin-bottom: 40px;
+    background-color: rgba(255, 255, 255, 0.545);
+    color: black;
+}
+
+.reloj{
+    border: 1px solid rgba( 255, 255, 255, 0.5);
+    border-radius: 100%;
+    text-align: center;
+    line-height: 400px;
+    font-size: 80px;
+    margin-bottom: 50px;
+}
+
+.time{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn{
+    display: block;
+    min-width: 100px;
+    margin: auto;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    border: 1px solid rgba( 255, 255, 255, 0.5);
+    border-radius: 20px;
+    background: none;
+    background-color: rgba(red, green, blue, 0);
+    color: white;
+    font-size: 20px;
+    transition: all 300ms;
+}
+
+.btn-top{
+    display: block;
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    width: 50px;
+    height: 50px;
+    margin: 0;
+    padding: 0;
+    border: 2px solid white;
+    border-radius: 100%;
+    background-color: black;
+    text-align: center;
+    color: white;
+    transition: all 300ms;
+}
+
+.btn-top:hover{
+    background-color: rgb(43, 43, 43);
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
+.oculto{
+    display: none;
+}
+
