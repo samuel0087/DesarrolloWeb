@@ -70,4 +70,24 @@ gato.edad = 5;
 console.warn(gato.edad);
 
 //JSON
- 
+ let auto = {
+    marca: "Ford",
+    modelo: "Taunus coupe GT SP",
+    anio: 1981,
+    Puertas: 2
+ }
+
+ let autoJSON = JSON.stringify(auto);
+
+ console.log(auto);
+
+ //convertir de un objeto literal a json
+ console.info(autoJSON);
+
+ //de un json a un objeto literal
+ let convertido = JSON.parse(autoJSON);
+ console.warn(convertido);
+
+ for(let clave in auto){
+    console.log(`${clave}: ${auto[clave]}`);
+ }
