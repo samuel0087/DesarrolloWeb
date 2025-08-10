@@ -1,10 +1,15 @@
 body{
     background: url('../img/auto-futurista.jpg') no-repeat center center/cover;
+    background-attachment: fixed;
     height: 100vh;
     margin: 0;
     padding: 0;
     font-family: sans-serif;
     flex-direction: column;
+}
+
+*{
+    box-sizing: border-box;
 }
 
 .wrap{
@@ -37,6 +42,32 @@ header{
 
 main{
     width: 70%;
+    padding: 20px;
+}
+
+.encabezado-lista{
+    border-bottom: 0.5px solid white;
+}
+
+.encabezado-lista ul{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    text-decoration: none;
+    list-style: none;
+}
+
+.encabezado-lista ul li{
+    min-width: 100px;
+    width: 25%;
+    padding: 10px 5px;
+    border-left: 1px solid white;
+    text-align: center;
+}
+
+.encabezado-lista ul:last-child{
+    border-right: 1px solid white;
 }
 
 aside{
@@ -44,8 +75,7 @@ aside{
     padding: 20px;
 
 }
-
-aside h2{
+ h2{
     border-bottom: 1px solid white;
     padding: 10px 0 ;
     margin-bottom: 60px;

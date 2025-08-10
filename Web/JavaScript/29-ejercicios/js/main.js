@@ -12,7 +12,7 @@
  * y se debe poder eliminar cualquiera de ellas de la lista en cualquier momento.
  * 
  * Tareas:
- * -Crear formulario.
+ * -Crear formulario.   
  * -Funcion para guardar las peliculas con los datos necesarios
  * -funcion para mostrar peliculas extraidas del localStorage
  * -Las peliculas deben cargarse automaticamente al cargar la web
@@ -30,6 +30,12 @@ window.addEventListener("load", () => {
     }
 
     let peli = [];
+
+    let pelip = new Pelicula("Naruto");
+
+    guardarPeli(peli, pelip);
+    guardarPeli(peli, pelip);
+    guardarPeli(peli, pelip);
 
 
     console.log(peli);
@@ -55,5 +61,16 @@ window.addEventListener("load", () => {
 
         return aux;
     }
+
+    function setPeliculas(peliculas){
+        if(typeof(Storage) !== "undefined"){
+            
+        }
+        else{
+            alert("No esta disponible el storage");
+        }
+    }
+
+
 
 })
