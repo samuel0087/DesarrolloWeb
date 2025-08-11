@@ -37,8 +37,11 @@ window.addEventListener("load", () => {
     guardarPeli(peli, pelip);
     guardarPeli(peli, pelip);
 
+    setPeliculas(peli);
+
 
     console.log(peli);
+    console.log(getPeliculas());
 
     function guardarPeli(peliculas, nueva){
         if(typeof(Storage) !== "Undefined"){
@@ -64,7 +67,7 @@ window.addEventListener("load", () => {
 
     function setPeliculas(peliculas){
         if(typeof(Storage) !== "undefined"){
-            
+            localStorage.setItem("peliculas", JSON.stringify(peliculas));
         }
         else{
             alert("No esta disponible el storage");
