@@ -29,23 +29,21 @@ window.addEventListener("load", () => {
         }
     }
 
-    let peli = [];
+    let pelisContainer = document.querySelector("#misPelis");
 
-    let pelip = new Pelicula("Naruto");
-
-    guardarPeli(peli, pelip);
-    guardarPeli(peli, pelip);
-    guardarPeli(peli, pelip);
-
-    setPeliculas(peli);
+    let peliculasAll = getPeliculas();
+    mostrarPeliculas(peliculasAll);
 
 
-    console.log(peli);
-    console.log(getPeliculas());
 
-    function guardarPeli(peliculas, nueva){
+
+    function guardarPeli(nueva){
         if(typeof(Storage) !== "Undefined"){
-            peliculas.push(nueva);
+            if(peliculasAll == null){
+                peliculasAll =[]
+            }
+
+            peliculasAll.push(nueva);
         }
         else{
             alert("Storage no dispinible");
@@ -53,7 +51,7 @@ window.addEventListener("load", () => {
     }
 
     function getPeliculas(){
-        let aux;
+        let aux=[];
 
         if(typeof(Storage) !== "Undefined"){
             aux = JSON.parse(localStorage.getItem('peliculas'));
@@ -73,6 +71,31 @@ window.addEventListener("load", () => {
             alert("No esta disponible el storage");
         }
     }
+
+    function mostrarPeliculas(peliculas){
+        if(peliculas != null){
+            peliculas.forEach(peli => {
+                let lista = document.createElement("ul");
+
+                lista.innerHTML += `<li>${peli.nombre}</li>`;
+                lista.innerHTML += `<li>${peli.puntuacion}</li>`;
+                lista.innerHTML += `<li>${peli.fecha.getDay()}</li>`;
+                lista.innerHTML += `<li><button class="btn">Eliminar</button></li>`;
+
+                pelisContainer.append(lista);
+            });
+        }
+        else{
+            alert(peliculas);
+        }
+    }
+
+    document.querySelector(".formulario").addEventListener("submit", function(event){
+        event.preventDefault();
+        let peli = new Pelicula(document.querySelector("#nombre").value);
+        guardarPeli(peli);
+        setPeliculas(peliculasAll);
+    })
 
 
 
