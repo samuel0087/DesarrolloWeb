@@ -79,7 +79,7 @@ window.addEventListener("load", () => {
 
                 lista.innerHTML += `<li>${peli.nombre}</li>`;
                 lista.innerHTML += `<li>${peli.puntuacion}</li>`;
-                lista.innerHTML += `<li>${peli.fecha.getDay()}</li>`;
+                lista.innerHTML += `<li>${peli.fecha}</li>`;
                 lista.innerHTML += `<li><button class="btn">Eliminar</button></li>`;
 
                 pelisContainer.append(lista);
@@ -95,6 +95,7 @@ window.addEventListener("load", () => {
         let peli = new Pelicula(document.querySelector("#nombre").value);
         guardarPeli(peli);
         setPeliculas(peliculasAll);
+        window.location.reload();
     })
 
 
