@@ -12,7 +12,7 @@
  * y se debe poder eliminar cualquiera de ellas de la lista en cualquier momento.
  * 
  * Tareas:
- * -Crear formulario.   
+ * -Crear formulario.   *
  * -Funcion para guardar las peliculas con los datos necesarios
  * -funcion para mostrar peliculas extraidas del localStorage
  * -Las peliculas deben cargarse automaticamente al cargar la web
@@ -21,83 +21,116 @@
  */
 
 window.addEventListener("load", () => {
-    class Pelicula {
-        constructor(nombre){
-            this.nombre = nombre;
-            this.fecha = new Date;
-            this.puntuacion = Math.round(Math.random()*10);
+    // class Pelicula {
+    //     constructor(nombre){
+    //         this.nombre = nombre;
+    //         this.fecha = new Date;
+    //         this.puntuacion = Math.round(Math.random()*10);
+    //     }
+    // }
+
+    // let pelisContainer = document.querySelector("#misPelis");
+
+    // let peliculasAll = getPeliculas();
+    // mostrarPeliculas(peliculasAll);
+
+
+
+
+    // function guardarPeli(nueva){
+    //     if(typeof(Storage) !== "Undefined"){
+    //         if(peliculasAll == null){
+    //             peliculasAll =[]
+    //         }
+
+    //         peliculasAll.push(nueva);
+    //     }
+    //     else{
+    //         alert("Storage no dispinible");
+    //     }
+    // }
+
+    // function getPeliculas(){
+    //     let aux=[];
+
+    //     if(typeof(Storage) !== "Undefined"){
+    //         aux = JSON.parse(localStorage.getItem('peliculas'));
+    //     }
+    //     else{
+    //         alert("Storage no dispinible");
+    //     }
+
+    //     return aux;
+    // }
+
+    // function setPeliculas(peliculas){
+    //     if(typeof(Storage) !== "undefined"){
+    //         localStorage.setItem("peliculas", JSON.stringify(peliculas));
+    //     }
+    //     else{
+    //         alert("No esta disponible el storage");
+    //     }
+    // }
+
+    // function mostrarPeliculas(peliculas){
+    //     if(peliculas != null){
+    //         peliculas.forEach(peli => {
+    //             let lista = document.createElement("ul");
+
+    //             lista.innerHTML += `<li>${peli.nombre}</li>`;
+    //             lista.innerHTML += `<li>${peli.puntuacion}</li>`;
+    //             lista.innerHTML += `<li>${peli.fecha}</li>`;
+    //             lista.innerHTML += `<li><button class="btn">Eliminar</button></li>`;
+
+    //             pelisContainer.append(lista);
+    //         });
+    //     }
+    //     else{
+    //         alert(peliculas);
+    //     }
+    // }
+
+    // document.querySelector(".formulario").addEventListener("submit", function(event){
+    //     event.preventDefault();
+    //     let peli = new Pelicula(document.querySelector("#nombre").value);
+    //     guardarPeli(peli);
+    //     setPeliculas(peliculasAll);
+    //     window.location.reload();
+    // })
+
+
+    //** */
+
+    /* EJERCICIO COMO EN EL CURSO */
+
+    function guardar(){
+        //Seleccionar la caja de texto y sacar su valor
+        let nombrePeli = document.querySelector("#nombre").value;
+
+        //Validacion
+        if(nombrePeli.trim() === ""){
+            alert("Por favor ingrese un nombre valido");
+
+            return false;
         }
+
+        //Conseguir fecha actual
+        
+        //Generar un numero aleatorio para la popularidad
+        //crear un objeto pelicula
+        //Sacar todas las peliculas(Array de objetos)
+        //Añadir al array una nueva peli
+        //Guardar todo en el llocalStorage
+        //Limpiar el campo de texto
+        //Mostrar peliculas
+
     }
 
-    let pelisContainer = document.querySelector("#misPelis");
+    let formulario = document.querySelector(".formulario");
 
-    let peliculasAll = getPeliculas();
-    mostrarPeliculas(peliculasAll);
+    formulario.addEventListener("submit", (e) =>{
+        e.preventDefault();
 
-
-
-
-    function guardarPeli(nueva){
-        if(typeof(Storage) !== "Undefined"){
-            if(peliculasAll == null){
-                peliculasAll =[]
-            }
-
-            peliculasAll.push(nueva);
-        }
-        else{
-            alert("Storage no dispinible");
-        }
-    }
-
-    function getPeliculas(){
-        let aux=[];
-
-        if(typeof(Storage) !== "Undefined"){
-            aux = JSON.parse(localStorage.getItem('peliculas'));
-        }
-        else{
-            alert("Storage no dispinible");
-        }
-
-        return aux;
-    }
-
-    function setPeliculas(peliculas){
-        if(typeof(Storage) !== "undefined"){
-            localStorage.setItem("peliculas", JSON.stringify(peliculas));
-        }
-        else{
-            alert("No esta disponible el storage");
-        }
-    }
-
-    function mostrarPeliculas(peliculas){
-        if(peliculas != null){
-            peliculas.forEach(peli => {
-                let lista = document.createElement("ul");
-
-                lista.innerHTML += `<li>${peli.nombre}</li>`;
-                lista.innerHTML += `<li>${peli.puntuacion}</li>`;
-                lista.innerHTML += `<li>${peli.fecha}</li>`;
-                lista.innerHTML += `<li><button class="btn">Eliminar</button></li>`;
-
-                pelisContainer.append(lista);
-            });
-        }
-        else{
-            alert(peliculas);
-        }
-    }
-
-    document.querySelector(".formulario").addEventListener("submit", function(event){
-        event.preventDefault();
-        let peli = new Pelicula(document.querySelector("#nombre").value);
-        guardarPeli(peli);
-        setPeliculas(peliculasAll);
-        window.location.reload();
+        guardar();
     })
-
-
-
 })
