@@ -45,6 +45,28 @@ main{
     padding: 20px;
 }
 
+.peliContainer{
+    text-align: left!important;
+    border-bottom: 1px solid white;
+    padding: 10px;
+}
+
+.peliContainer p:last-child{
+    text-align: end;
+}
+
+.peliContainer h3{
+    font-size: 24px;
+}
+
+.peliContainer .btn{
+    max-width: 200px;
+    background-color: rgb(160, 10, 10);
+    color: white;
+
+}
+
+
 .encabezado-lista{
     border-bottom: 0.5px solid white;
 }
@@ -73,6 +95,7 @@ main{
 aside{
     width: 25%;
     padding: 20px;
+    max-height: 400px;
 
 }
  h2{
