@@ -11,6 +11,35 @@ body{
     background-color: white;
     max-width: 1200px;
     margin: 20px auto;
+    padding: 20px;
+}
+
+.header{
+    width: 100%;
+}
+
+.header__logo{
+    background-color: #1a87c8;
+    width: 300px;
+    padding:10px;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+}
+
+.header__logo h1{
+    margin: 0;
+}
+
+/* Barra de navegacion*/
+
+.header__navegador{
+    background-color: #333;
+    width: 100%;
+}
+
+.header__navegador ul{
+    display: flex;
 }
 
 
