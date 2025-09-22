@@ -55,11 +55,20 @@ body{
     color: #ddd;
     font-size: 14px;
     font-weight: lighter;
+    transition: all 300ms;
+}
 
+.header__navegador ul li:hover{
+    cursor: pointer;
+    background-color: white;
+    color: #333;
 }
 
 /*Banner*/
 .banner{
+    background: #000000;
+background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(130, 130, 130, 0) 10%, rgba(130, 130, 130, 0) 90%, rgba(0, 0, 0, 1) 100%);
+    position: relative;
     width: 100%;
     height: 400px;
     border: 5px solid white;
@@ -70,8 +79,38 @@ body{
 }
 
 .banner__img{
+    position: absolute;
     width: 100%;
 }
+
+
+.banner__arrowLeft{
+    display: block;
+    position: absolute;
+    background: url("../img/arrow-izq.png");
+    left: 0;
+}
+
+
+.arrow:hover{
+    cursor: pointer;
+}
+
+.banner__arrowRight{
+    display: block;
+    position: absolute;
+    background: url("../img/arrow-der.png");
+    right: 0;
+}
+
+.arrow{
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+    width: 100px;
+    z-index: 2;
+}
+
 
 
 /*PRINCIPAL*/
@@ -188,6 +227,34 @@ input[type="password"]:focus{
     font-size: 14px;
     padding: 5px 15px;
     text-align: center;
+}
+
+
+.btn-top{
+    display: block;
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    width: 50px;
+    height: 50px;
+    margin: 0;
+    padding: 0;
+    border: 2px solid white;
+    border-radius: 100%;
+    background-color: black;
+    text-align: center;
+    color: white;
+    transition: all 300ms;
+}
+
+.btn-top:hover{
+    background-color: rgb(43, 43, 43);
+    cursor: pointer;
+}
+
+.oculto{
+    display: none;
+    bottom: -50px;
 }
 
 
