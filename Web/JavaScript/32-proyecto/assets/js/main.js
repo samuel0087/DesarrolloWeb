@@ -42,3 +42,18 @@ btnAnterior.addEventListener("click", ()=>{
         banner.setAttribute("src", imagenes[indiceActual-1]);
     }
 });
+
+/*Array de objetos */
+
+let articulo = {
+    titulo: "",
+    fecha:"",
+    contenido:"",
+    articulo(){
+
+    }
+
+}
+
+
+console.logart1();

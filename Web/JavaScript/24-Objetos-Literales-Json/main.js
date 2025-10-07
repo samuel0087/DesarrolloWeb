@@ -25,7 +25,7 @@ let perro = {
 
 
 //Acceder a valores del objeto
-//Notacion de puto (mas utilizada)
+//Notacion de punto (mas utilizada)
 
 console.info(perro.nombre);
 console.info(perro.macho);
