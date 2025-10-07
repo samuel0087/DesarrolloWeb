@@ -1,0 +1,43 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #555;
+}
+
+header{
+    position: relative;
+    height: 150px;
+    background-color: aquamarine;
+    text-align: center;
+    line-height: 150px;
+    z-index: 1;
+    overflow: hidden;
+}
+
+h1{
+    margin:  0;
+
+}
+
+nav{
+    color: white;
+    transform: translateY(-150px);
+    animation-name: desplegar;
+    animation-duration: 5s ;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes desplegar{
+    0%{
+        transform: translateY(-150px);
+    }
+    50%{
+        transform: translateY(0px);
+
+    }
+   100%{
+        transform: translateY(-150px);
+
+    }
+}
