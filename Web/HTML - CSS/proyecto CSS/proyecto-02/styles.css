@@ -1,0 +1,76 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: "Poppins", sans-serif;
+    background-color: #cf7285;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+}
+
+
+
+.data__img{
+    width: 120px;
+    height: 120px;
+    border: 5px solid white;
+    overflow: hidden;
+    border-radius: 500px;
+}
+
+.data__img img{
+    width: 100%;
+    transform: translateY(-15px);
+}
+
+.card{
+    background-color: #e95370;
+    width: 400px;
+    margin: 0 auto;
+    border-radius: 20px;
+    color: white;
+    font-size: 14px;
+    overflow: hidden;
+    box-shadow: 0 0 10px #e95370, 0 0 50px #cf7285;
+}
+
+.data__usuario span{
+    font-weight: 600;
+}
+
+.card__data{
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+.card__social{
+    background-color: white;
+    color: black;
+}
+
+.card__social{
+    display: flex;
+    justify-content: space-around;
+    color: #777;
+}
+
+.card__social .social__data{
+    text-align: center;
+    padding:30px 0;
+}
+
+.card__social .data__value{
+    color: black;
+    font-weight: 600;
+    font-size: 18px
+}
+
+.card__social .social__data p{
+    margin: 0;
+}
